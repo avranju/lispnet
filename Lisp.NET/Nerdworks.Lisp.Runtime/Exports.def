@@ -1,0 +1,7 @@
+LIBRARY	"LispWrap"
+EXPORTS
+    LispBoot
+    LispCreateRuntime
+    LispEval
+    LispDeleteRuntime
+    LispShutdown

@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LispShell", "LispShell\LispShell.csproj", "{C500353E-48F7-48C6-A3D6-B081A1BA863D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nerdworks.Lisp.Web", "Nerdworks.Lisp.Web\Nerdworks.Lisp.Web.csproj", "{F074B0A6-56DA-4EC8-A02C-C8CA0A86EC2F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Nerdworks.Lisp.Runtime", "Nerdworks.Lisp.Runtime\Nerdworks.Lisp.Runtime.vcxproj", "{72EB01F8-C1DC-4430-B3CA-0F24912D400E}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs09.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = LispShell\\LispShell.csproj
+		SccProjectName1 = LispShell
+		SccLocalPath1 = LispShell
+		SccProjectUniqueName2 = Nerdworks.Lisp.Runtime\\Nerdworks.Lisp.Runtime.vcxproj
+		SccProjectName2 = Nerdworks.Lisp.Runtime
+		SccLocalPath2 = Nerdworks.Lisp.Runtime
+		SccProjectUniqueName3 = Nerdworks.Lisp.Web\\Nerdworks.Lisp.Web.csproj
+		SccProjectName3 = Nerdworks.Lisp.Web
+		SccLocalPath3 = Nerdworks.Lisp.Web
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C500353E-48F7-48C6-A3D6-B081A1BA863D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C500353E-48F7-48C6-A3D6-B081A1BA863D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C500353E-48F7-48C6-A3D6-B081A1BA863D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C500353E-48F7-48C6-A3D6-B081A1BA863D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C500353E-48F7-48C6-A3D6-B081A1BA863D}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{C500353E-48F7-48C6-A3D6-B081A1BA863D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C500353E-48F7-48C6-A3D6-B081A1BA863D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C500353E-48F7-48C6-A3D6-B081A1BA863D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C500353E-48F7-48C6-A3D6-B081A1BA863D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C500353E-48F7-48C6-A3D6-B081A1BA863D}.Release|Win32.ActiveCfg = Release|Any CPU
+		{F074B0A6-56DA-4EC8-A02C-C8CA0A86EC2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F074B0A6-56DA-4EC8-A02C-C8CA0A86EC2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F074B0A6-56DA-4EC8-A02C-C8CA0A86EC2F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F074B0A6-56DA-4EC8-A02C-C8CA0A86EC2F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F074B0A6-56DA-4EC8-A02C-C8CA0A86EC2F}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{F074B0A6-56DA-4EC8-A02C-C8CA0A86EC2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F074B0A6-56DA-4EC8-A02C-C8CA0A86EC2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F074B0A6-56DA-4EC8-A02C-C8CA0A86EC2F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F074B0A6-56DA-4EC8-A02C-C8CA0A86EC2F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F074B0A6-56DA-4EC8-A02C-C8CA0A86EC2F}.Release|Win32.ActiveCfg = Release|Any CPU
+		{72EB01F8-C1DC-4430-B3CA-0F24912D400E}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{72EB01F8-C1DC-4430-B3CA-0F24912D400E}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{72EB01F8-C1DC-4430-B3CA-0F24912D400E}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{72EB01F8-C1DC-4430-B3CA-0F24912D400E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{72EB01F8-C1DC-4430-B3CA-0F24912D400E}.Debug|Win32.Build.0 = Debug|Win32
+		{72EB01F8-C1DC-4430-B3CA-0F24912D400E}.Release|Any CPU.ActiveCfg = Release|Win32
+		{72EB01F8-C1DC-4430-B3CA-0F24912D400E}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{72EB01F8-C1DC-4430-B3CA-0F24912D400E}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{72EB01F8-C1DC-4430-B3CA-0F24912D400E}.Release|Win32.ActiveCfg = Release|Win32
+		{72EB01F8-C1DC-4430-B3CA-0F24912D400E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

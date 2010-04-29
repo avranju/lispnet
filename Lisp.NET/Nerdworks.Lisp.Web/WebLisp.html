@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Nerdworks Web Lisp</title>
+    <style type="text/css">
+        body
+        {
+        	font-family : Calibri, Tahoma, Verdana, Georgia;
+        	font-size : 12px;
+        }
+        
+        #wrapper
+        {
+        	width : 900px;
+        	height : 600px;
+        	margin : 0px auto;
+        	border : 1px solid #bbb;
+        	padding : 10px;
+        }
+        
+        #console
+        {
+        	height : 500px;
+            background-color : #DEDEDE;
+            font-family : Consolas, Lucida Console, Courier New;
+            border : solid 1px gray;
+            position : relative;
+            overflow : hidden;
+        }
+        
+        #code
+        {
+        	height : 80px;
+        	background-color : #505050;
+        	border : solid 1px gray;
+        }
+
+        #txtCode
+        {
+        	font-family : Consolas, Lucida Console, Courier New;
+        	background-color : #F0F0F0;
+        	font-size : 10pt;
+        	height : 73px;
+        }
+        
+        #msg
+        {
+        	height : 20px;
+        	color : #CFCFCF;
+        	text-align : center;
+        	background-color : #505050;
+        }
+        
+        #console-code
+        {
+        	font-family : Consolas, Lucida Console, Courier New;
+        	position : absolute;
+        	bottom : 7px;
+        	left : 5px;
+        	overflow : scroll;
+        }
+    </style>
+    
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    
+    <script type="text/javascript" language="javascript">
+
+        function onEval(data) {
+            //
+            // build the result html
+            //
+            var html = "";
+            if (data.Success == true) {
+                if (data.StandardOutput != null && data.StandardOutput.length > 0)
+                    html += data.StandardOutput + "<br/>";
+                if (data.ErrorOutput != null && data.ErrorOutput.length > 0)
+                    html += "<font color=\"red\">" + data.ErrorOutput + "</font><br/>";
+                if (data.Value != null && data.Value.length > 0)
+                    html += "<strong>" + data.Value + "</strong><br/>";
+            }
+            else {
+                html = "<b>Eval failed.</b><br/>";
+                if (data.ErrorOutput != null && data.ErrorOutput.length > 0)
+                    html += "<font color=\"red\">" + data.ErrorOutput + "</font><br/>";
+            }
+
+            //
+            // append the result html to the code console
+            //
+            $("#console-code").append(html);
+
+            //
+            // clear the code text field and set focus to it
+            //
+            $("#txtCode").focus().val("");
+        }
+
+    </script>
+
+    <script type="text/javascript" language="javascript">
+
+        //
+        // load jquery
+        //
+        google.load("jquery", "1");
+
+        //
+        // initialize
+        //
+        google.setOnLoadCallback(function() {
+            //
+            // set keyboard focus to the code textbox
+            //
+            var txtCode = $("#txtCode");
+            txtCode.focus();
+
+            txtCode.keypress(function(e) {
+                //
+                // Shift+Enter - submit code
+                //
+                if (e.shiftKey == true && e.which == 13) {
+                    $.post("WebLisp.ashx", $("#txtCode").val(), onEval, "json");
+                }
+
+                //
+                // Ctrl+J - move forward in history
+                //
+                if ((e.ctrlKey == true) && (e.shiftKey == true))
+                    alert(e.which);
+
+                //
+                // Ctrl+K - move back in history
+                //
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="console">
+            <div id="console-code"></div>
+        </div>
+        <div id="code">
+            <textarea id="txtCode" cols="124" rows="3"></textarea>
+        </div>
+        <div id="msg">Hit <u>Shift+Enter</u> to submit.</div>
+    </div>
+</body>
+</html>
