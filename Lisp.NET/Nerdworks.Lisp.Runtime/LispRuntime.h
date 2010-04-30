@@ -52,6 +52,7 @@ protected:
 
 	static wstring ecl_string_pointer_safe(cl_object f);
 	static cl_object ecl_null_terminated_string(cl_object f);
+	static cl_object ecl_check_type_string(cl_object fun, cl_object p);
 
 public:
 	static void Boot();

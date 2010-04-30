@@ -131,6 +131,17 @@ bool CLispRuntime::Eval( const TCHAR *pszForm,
 	return true;
 }
 
+cl_object CLispRuntime::ecl_check_type_string(cl_object fun, cl_object p)
+{
+	cl_type t;
+	while( ( ( t = type_of(p) ) != t_base_string ) &&
+		   ( t != t_string ) )
+	{
+		p = ecl_type_error(fun,"",p,ECL_SYM("STRING",803));
+	}
+
+	return p;
+}
 wstring CLispRuntime::ecl_string_pointer_safe(cl_object f)
 {
 	int32_t *s;
